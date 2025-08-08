@@ -23,7 +23,11 @@
       <td>
         <a href="{{route('voitures.show',$voiture->id)}}">details</a>
         <a href="{{route('voitures.edit',$voiture->id)}}">editer</a>
-        <a href="">supprimer</a>
+        <form action="{{route('voitures.destroy',$voiture->id)}}" method="Post">
+        @csrf
+        @method('delete')
+        <button type="submit">Supprimer</button>
+        </form>
       </td>
     </tr>
     

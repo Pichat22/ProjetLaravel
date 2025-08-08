@@ -22,6 +22,7 @@ Route::post('voitures/ajouter',[VoitureController::class,'store'])->name('voitur
 Route::get('voitures/{voiture}/details',[VoitureController::class,'show'])->name('voitures.show');
 Route::get('voitures/{voiture}/editer',[VoitureController::class,'edit'])->name('voitures.edit');
 Route::put('voitures/{voiture}',[VoitureController::class,'update'])->name('voitures.update');
+Route::delete('voitures/{voiture}',[VoitureController::class,'destroy'])->name('voitures.destroy');
 
 Route::get('chauffeurs',[ChauffeurController::class,'index'])->name('chauffeurs.index');
 Route::get('chauffeurs/create',[ChauffeurController::class,'create'])->name('chauffeurs.create');

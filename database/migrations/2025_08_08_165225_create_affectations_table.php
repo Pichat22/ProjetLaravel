@@ -11,17 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('chauffeurs', function (Blueprint $table) {
+        Schema::create('affectations', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->string('prenom');
-            $table->string('adresse');
-            // $table->string('type_permis');
-            $table->string('telephone');
+            $table->string('date');
             // on utilise pour les grandes données
-            $table->unsignedBigInteger('typeid');
+            $table->unsignedBigInteger('voitureid');
             // onDelete("cascade") signifie que qu'on le père est supprimé les enfants aussi se suppriment
-            $table->foreign('typeid')->references('id')->on('type_permis');
+            $table->foreign('voitureid')->references('id')->on('voitures');
+            
+            $table->unsignedBigInteger('chauffeurid');
+            // onDelete("cascade") signifie que qu'on le père est supprimé les enfants aussi se suppriment
+            $table->foreign('chauffeurid')->references('id')->on('chauffeurs');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('chauffeurs');
+        Schema::dropIfExists('affectations');
     }
 };
