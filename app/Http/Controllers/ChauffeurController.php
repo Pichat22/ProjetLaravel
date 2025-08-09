@@ -36,7 +36,7 @@ class ChauffeurController extends Controller
         $chauffeur->nom = $request->input('nom');
         $chauffeur->prenom = $request->input('prenom');
         $chauffeur->adresse = $request->input('adresse');
-        $chauffeur->type_permis = $request->input('type_permis');
+        $chauffeur->typeid = $request->input('typeid');
         $chauffeur->telephone = $request->input('telephone');
         $chauffeur->save();
         return redirect()->route('chauffeurs.index');

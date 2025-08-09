@@ -19,7 +19,7 @@
       <td>{{$chauffeur->nom}}</td>
       <td>{{$chauffeur->prenom}}</td>
       <td>{{$chauffeur->adresse}}</td>
-      <td>{{$chauffeur->type_permis}}</td>
+      <td>{{$chauffeur->typeid}}</td>
       <td>{{$chauffeur->telephone}}</td>
     </tr>
     

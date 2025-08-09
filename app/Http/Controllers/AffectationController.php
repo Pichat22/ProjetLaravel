@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Voiture;
+use App\Models\Chauffeur;
 use App\Models\Affectation;
 use Illuminate\Http\Request;
 
@@ -22,7 +24,9 @@ class AffectationController extends Controller
      */
     public function create()
     {
-        return view('affectations.form');
+        $voitures=Voiture::all();
+        $chauffeurs=Chauffeur::all();
+        return view('affectations.form',compact('voitures','chauffeurs'));
 
     }
 

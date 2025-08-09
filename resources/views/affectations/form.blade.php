@@ -13,17 +13,18 @@
     <label for="exampleInputPassword1" class="form-label">Chauffeur</label>
     <select class="form-select" aria-label="Default select example" name="chauffeurid">
   <option selected>Selectionnez un chauffeur</option>
-  <option value="1">One</option>
- 
+  @foreach($chauffeurs as $chauffeur)
+  <option value="{{$chauffeur->id}}">{{$chauffeur->nom}}</option>
+  @endforeach
 </select>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Voiture</label>
     <select class="form-select" aria-label="Default select example" name="voitureid">
   <option selected>Selectionnez une voiture</option>
- 
-  <option value="1"></option>
-
+  @foreach($voitures as $voiture)
+  <option value="{{$voiture->id}}">{{$voiture->matricule}}</option>
+  @endforeach
  
 </select>
   </div>

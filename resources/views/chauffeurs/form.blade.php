@@ -23,7 +23,7 @@
     <select class="form-select" aria-label="Default select example" name="typeid">
   <option selected>Selectionnez un type</option>
   @foreach($types as $typepermis)
-  <option value="1">{{$typepermis->nom}}</option>
+  <option value="{{$typepermis->id}}">{{$typepermis->nom}}</option>
   @endforeach 
 </select>
     </div>
