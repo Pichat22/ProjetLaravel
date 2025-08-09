@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class type_permis extends Model
+class Typepermis extends Model
 {
     //
 }

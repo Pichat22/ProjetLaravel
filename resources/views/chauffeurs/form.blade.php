@@ -19,8 +19,14 @@
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Type_permis</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" name="type_permis">
-  </div>
+  
+    <select class="form-select" aria-label="Default select example" name="typeid">
+  <option selected>Selectionnez un type</option>
+  @foreach($types as $typepermis)
+  <option value="1">{{$typepermis->nom}}</option>
+  @endforeach 
+</select>
+    </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Telephone</label>
     <input type="text" class="form-control" id="exampleInputPassword1" name="telephone">

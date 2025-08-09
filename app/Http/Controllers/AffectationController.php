@@ -12,7 +12,9 @@ class AffectationController extends Controller
      */
     public function index()
     {
-        //
+        $affectations=Affectation::all();
+        return view('affectations.form',compact('affectations'));
+        
     }
 
     /**
@@ -20,7 +22,8 @@ class AffectationController extends Controller
      */
     public function create()
     {
-        //
+        return view('affectations.form');
+
     }
 
     /**

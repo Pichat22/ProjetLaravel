@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Chauffeur;
+use App\Models\Typepermis;
 use Illuminate\Http\Request;
 
 class ChauffeurController extends Controller
@@ -21,7 +22,9 @@ class ChauffeurController extends Controller
      */
     public function create()
     {
-        return view('chauffeurs.form');
+        $types=Typepermis::all();
+       
+        return view('chauffeurs.form',compact('types'));
     }
 
     /**
