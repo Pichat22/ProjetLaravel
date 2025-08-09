@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Voiture extends Model
 {
-    //
+    public function affectations(){
+        return $this->hasMany(Affectation::class);
+    }
 }
